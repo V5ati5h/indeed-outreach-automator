@@ -25,7 +25,10 @@ def fetch_applications() -> list[dict[str, Any]]:
 
 def load_cached(path: Path | None = None) -> list[dict[str, Any]]:
     p = path or (config.BASE_DIR / "indeed_applications.json")
-    payload = json.loads(p.read_text(encoding="utf-8"))
+    try:
+        payload = json.loads(p.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        raise RuntimeError(f"No offline fixture at {p.name}. Run a live sync once first.")
     if isinstance(payload, list):
         return payload
     jobs = payload.get("body", {}).get("appStatusJobs", [])

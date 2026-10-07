@@ -16,7 +16,12 @@ if not LEGACY_CSV.exists() and (config.BASE_DIR / "job_leads.csv").exists():
 
 def run_cycle(offline: bool = False, enrich: bool = True) -> dict:
     init_db()
-    raw = load_cached() if offline else fetch_applications()
+    if offline:
+        raw = load_cached()
+    else:
+        raw = fetch_applications()
+        # ponytail: snapshot every live fetch so offline sync always has a fixture
+        (config.BASE_DIR / "indeed_applications.json").write_text(json.dumps(raw), encoding="utf-8")
     apps = parse_applications(raw)
     with get_db() as conn:
         # ponytail: root job_leads.csv is a live collect source, re-ingested idempotently every cycle
