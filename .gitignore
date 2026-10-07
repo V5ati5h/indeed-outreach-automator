@@ -1,0 +1,30 @@
+# Secrets — never commit
+.env
+*.env
+
+# Local lead DB (rebuild via: python run.py init && python run.py migrate)
+data/*.db
+data/*.db-wal
+data/*.db-shm
+data/chrome-profile/
+
+# Run logs + cached Indeed responses (may carry session data)
+/logs/
+indeed_applications.json
+outreach_review.csv
+
+# Generated export (source of truth is DB + assets/job_leads.csv)
+/exports/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

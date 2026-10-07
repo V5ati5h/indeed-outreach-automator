@@ -1,0 +1,137 @@
+Lead ID,Lead Name,Company,Email,Phone,Alternate Phone,Website,Contact Type,Location,Careers URL,Hiring Signal,Target Roles
+ID-0001,,Aadrila Technologies Private Limited.,support@aadrila.com,,,https://aadrila.com,General,"Vile Parle, Mumbai, Maharashtra",,Senior Fullstack Engineer,Senior Fullstack Engineer
+ID-0002,,Abaci Software,support@abacisoftware.com,+91 7400100030,,http://www.abacisoftware.com/,General,"Andheri West, Mumbai, Maharashtra",,Website Developer,Website Developer
+ID-0003,,ABC DESIGNS,info@abcdesigns.in,+91 84333 03188,+91 85910 79179,https://abcdesigns.in/,General,"Andheri East, Mumbai, Maharashtra",,Backend Developer (PHP / Laravel + AI Knowledge),Backend Developer (PHP / Laravel + AI Knowledge)
+ID-0004,,Aimbeat Softech,info@aimbeatsoftech.com,+91 85910 79179,+91 8655599996,https://aimbeatsoftech.com,General,"Vashi, Navi Mumbai",https://aimbeatsoftech.com/career,Current careers page lists PHP Developer openings,PHP Developer; CodeIgniter
+ID-0005,,Aimbeat.com,info@aimbeat.com,+91 9870066177,,https://aimbeat.com/,General,"Andheri East, Mumbai, Maharashtra",,WordPress Web Developer (Immediate Joiner),WordPress Web Developer (Immediate Joiner)
+ID-0006,,Appdid Technologies,info@appdid.com,+91 7066600093,+91 7066600094,https://www.appdid.com,General,"Thane, Maharashtra",https://www.appdid.com/index.php/career,Career application page with HR/recruitment contact,Software / Mobile / Web Development
+ID-0007,HR / Recruitment Team,Atria Web Solutions,,+91 8766039459,,https://www.atriawebsolutions.in/,Careers / Company,Mumbai / Vasai-Virar,https://www.atriawebsolutions.in/careers,Current Frontend Developer Mumbai/Remote and Backend Developer Laravel/PHP/MySQL,React; Next.js; Frontend; Laravel; PHP; MySQL; UI/UX
+ID-0008,,Beyond the Decor,teambeyondthedecor@gmail.com,+91 98200 90665,,https://beyondthedecorglobal.com/,,"Andheri West, Mumbai, Maharashtra",,Project Manager,Project Manager
+ID-0009,,Bitnex Infotech,hr@bitnexinfotech.com,,,https://www.bitnexinfotech.com,HR,Mumbai / Remote,https://www.bitnexinfotech.com/careers,Current Senior React Developer opening,Senior React Developer
+ID-0010,,Bizinso,hr@bizinso.com,,,https://bizinso.com,HR,Mumbai,,Current Laravel Developer listing,Laravel Developer; PHP; MySQL
+ID-0011,,BlauPlug Innovations Pvt Ltd,info@blauplug.com,,"
++91 8090980902",https://blauplug.in/,,"Mumbai, Maharashtra",,Application Developer,Application Developer
+ID-0012,HR / Recruitment Team,Breeur Solutions,careers@breeur.com,,,https://www.breeur.com/,Careers,Mumbai / Remote,https://www.breeur.com/careers/,"Hiring across full-stack, mobile, AI/ML, cloud, DevOps and software roles",Full Stack; React; Node.js; PHP; React Native; Flutter; AI/ML; Cloud; DevOps
+ID-0013,HR / Recruitment Team,Bynaric Systems,info@bynaric.in,,,https://web.bynaric.in/,General / Hiring,Mumbai (role); company contact Pune,https://web.bynaric.in/jobs/fullstack-developer/,Current FullStack Developer; PHP/Laravel + React/Next.js + Docker,Full Stack Developer; PHP; Laravel; React; Next.js; Backend; DevOps
+ID-0014,,BytePanda Technologies Pvt. Ltd.,info@bytepanda.in,+91 8076414325,,https://www.bytepanda.in/,,"Mumbai, Maharashtra",,Full Stack Developer,Full Stack Developer
+ID-0015,,Capritech Global Services Private Limited,info@capritechglobal.com,,,https://capritechglobal.com/,,"Borivali, Mumbai, Maharashtra",,Flutter Developer,Flutter Developer
+ID-0016,,CD Infotech Pvt Ltd,hr@cdinfotech.com,+91 7710858128,,https://www.cdinfotech.com/,,"Andheri East, Mumbai, Maharashtra",,Sr. Python Developer | Python Developer (Backend & AI) – Contract,Sr. Python Developer | Python Developer (Backend & AI) – Contract
+ID-0017,,Convergence IT Services Pvt. Ltd.,,,,,,"Mumbai, Maharashtra",,Full Stack Developer,Full Stack Developer
+ID-0018,Sagar Salvi,CreativeWebo,sagar.salvi@creativewebo.com,+91 9004480375,,https://creativewebo.com,Named contact,"Vashi, Navi Mumbai",https://creativewebo.com/career,Career page; MERN/web-development requirements published,MERN; PHP; Web Development; QA
+ID-0019,HR / Recruitment Team,CSII India,hr@csinc.in,,,https://www.csinc.in/,HR / Careers,Navi Mumbai,https://in.indeed.com/viewjob?jk=277f6637a239cb5a,Current Laravel Developer 3-5 years; PHP/Laravel + React/Vue,Laravel; PHP; React; Vue; Node.js; APIs; Backend
+ID-0020,,CyberNX,hr@cybernx.com,+91 9167540326,,https://www.cybernx.com,HR,"Andheri East, Mumbai",https://www.cybernx.com/careers/,Current MERN Stack Developer opening,MERN Stack Developer
+ID-0021,,DERMECARE AESTHETICS,,,,,,"Andheri West, Mumbai, Maharashtra",,Digital Marketing Intern,Digital Marketing Intern
+ID-0022,,Dousoft IT,info@dousoftit.com,+91 7734996636,,https://www.dousoftit.com,General,India,https://www.dousoftit.com/career,"Current open roles: Frontend, Backend, MERN",Frontend Developer; Backend Developer; MERN Stack Developer
+ID-0023,,Echo Innovation Labs,,,,,,"Andheri, Mumbai, Maharashtra",,Software Developer,Software Developer
+ID-0024,,Episeio Business Solutions,,,,,,"Andheri East, Mumbai, Maharashtra",,Vue.Js Developer,Vue.Js Developer
+ID-0025,,Evercaring Pharmacy,,,,,,"Andheri East, Mumbai, Maharashtra",,PHP Laravel Developer - Senior,PHP Laravel Developer - Senior
+ID-0026,,Exavibes,,,,https://www.exavibes.com,Careers,Mumbai,https://www.exavibes.com/careers,Careers page lists MERN and PHP Developer roles,MERN Stack Developer; PHP Developer; Flutter Developer
+ID-0027,,Exemplar Dot Space Pvt Ltd,,,,,,"Kanjurmarg, Mumbai, Maharashtra",,Performance Marketing Intern,Performance Marketing Intern
+ID-0028,,FiatPe,,,,,,"Powai, Mumbai, Maharashtra",,Frontend Developer (Angular),Frontend Developer (Angular)
+ID-0029,,Fortune4 Technologies,hr@fortune4.in,,,https://fortune4.in,HR,Navi Mumbai,,PHP Developer listing,PHP Developer
+ID-0030,,GetSetHome,,,,,,"Versova, Mumbai, Maharashtra",,Senior Python Developer (FastAPI),Senior Python Developer (FastAPI)
+ID-0031,,GreyBath Technology PVT LTD,,,,,,"Andheri West, Mumbai, Maharashtra",,"Senior Full Stack Developer (Node.js, React, PostgreSQL) | Junior Full Stack Developer (Node.js, React, PostgreSQL) min 3 years experience | QA Engineer","Senior Full Stack Developer (Node.js, React, PostgreSQL) | Junior Full Stack Developer (Node.js, React, PostgreSQL) min 3 years experience | QA Engineer"
+ID-0032,,Guru Nanak Institute of Management Studies,,,,,,"Matunga, Mumbai, Maharashtra",,Social Media Marketing Intern,Social Media Marketing Intern
+ID-0033,,happy feet,,,,,,"Andheri West, Mumbai, Maharashtra",,Web Developer | Senior SEO Specialist,Web Developer | Senior SEO Specialist
+ID-0034,HR / Recruitment Team,HashTech Systems,info@hashtech.com,,,https://www.hashtech.com/,General / Hiring,Mumbai,https://www.hashtech.com/careers,"Current PHP Laravel, React Native, DevOps, QA and OCPP roles",PHP; Laravel; React Native; DevOps; AWS; QA; Backend
+ID-0035,,HEGX CORP,,,,,,"Mira Road, Thane, Maharashtra",,Web Developer,Web Developer
+ID-0036,,Helo.ai by viva connect,,,,,,"Andheri, Mumbai, Maharashtra",,Full Stack Developer,Full Stack Developer
+ID-0037,,Hiya Digital,hr@hiya.digital,,,https://careers.hiya.digital,HR,"Chembur, Mumbai",https://careers.hiya.digital/full-stack-developer/,Current Full Stack Developer and WordPress Developer roles,Full Stack Developer; WordPress Developer
+ID-0038,,Ideamagix,,,,,,"Wagle Estate, Thane, Maharashtra",,SEO Intern,SEO Intern
+ID-0039,HR / Recruitment Team,InfyApp Development,,,,https://infyapp.com/,Careers / Company,"Malad, Mumbai",https://in.indeed.com/viewjob?jk=4f02bf255bb0fcbc,Current PHP Laravel Developer; 3-5 years; immediate/15-day joining,PHP; Laravel; Backend; REST API; MySQL; AWS
+ID-0040,,ITAakash Strategic Software Pvt Ltd,,,,,,"Kanjur, Mumbai, Maharashtra",,SQL Developer,SQL Developer
+ID-0041,HR / Recruitment Team,Kanishka Software,hr@ksoftpl.com,+91 8657547075,+91 9967226700,https://kanishkasoftware.com/,HR / Careers,"Ghatkopar East, Mumbai",https://kanishkasoftware.com/company/careers/,"Current PHP Laravel Developer, AI Intern and Python Intern openings",PHP; Laravel; Backend; Python; AI; Internships
+ID-0042,,Knooviq Overseas,,,,,,"Malad, Mumbai, Maharashtra",,Digital Marketing Intern | SEO and digital marketing intern,Digital Marketing Intern | SEO and digital marketing intern
+ID-0043,,Kubic Technology,,,,https://kubictechnology.com,Careers,"Malad West, Mumbai",https://kubictechnology.com/careers,Laravel Developer role listed,Laravel Developer
+ID-0044,,Lifecare Diagnostics,,,,,,"Andheri West, Mumbai, Maharashtra",,IT Manager,IT Manager
+ID-0045,,Meet Bros,,,,,,"Andheri, Mumbai, Maharashtra",,Social Media Intern,Social Media Intern
+ID-0046,,Meizo Infotech Private Limited,,,,,,"Andheri, Mumbai, Maharashtra",,Front End Developer,Front End Developer
+ID-0047,Pragnesh,MeraSEO,pragnesh@meraseo.com,+91 8591076774,+91 9167117772,https://meraseo.com,Named contact,"Andheri West, Mumbai",,Indeed application/job match; WordPress Developer role,WordPress Developer
+ID-0048,,Mindspace Software,,,,https://mstpl.mindspacetech.com,Careers,"Mahape, Navi Mumbai",https://mstpl.mindspacetech.com/mstpl-career,PHP Developer role listed,PHP Developer; Laravel
+ID-0049,HR / Recruitment Team,Mindstack Software,hr@mindstack.co.in,+91 8800884338,,https://www.mindstack.co.in/,HR / Careers,Thane West,https://www.mindstack.co.in/careers,Open Full Stack Developer and .NET Developer; 0+ years listed,Full Stack; Node.js; React; .NET; Web API; Intern/Fresher
+ID-0050,,Mypcot,hr@mypcot.com,+91 8826276401,,https://mypcot.com,HR,"Saki Naka, Mumbai",https://www.mypcot.com/career,"Current roles include React Native, PHP Laravel, Flutter and BDE",React Native; PHP Laravel; Flutter; BDE
+ID-0051,,Nexasprint Technologies Private Limited,,,,,,"Vikhroli, Mumbai, Maharashtra",,Full Stack Developer,Full Stack Developer
+ID-0052,HR / Recruitment Team,Nipralo Technologies,sales@nipralo.com,+91 7977028431,,https://www.nipralo.com/,Company / Careers,"Ghatkopar East, Mumbai",https://www.nipralo.com/careers,"Current Frontend, Backend, Full Stack, ASP.NET, QA and related openings",Frontend; Backend; Full Stack; ASP.NET; QA; Software Development
+ID-0053,,Noveaxis,hr@noveaxis.com,,,https://www.noveaxis.com,HR,Mumbai / Remote,https://www.noveaxis.com/career,Current Full Stack Developer opening,Full Stack Developer; Sales Manager; Customer Support
+ID-0054,,OneCell Diagnostics India Private Limited (1Cell.Ai),,,,,,"Powai, Mumbai, Maharashtra",,Full Stack Developer - Bioinformatics,Full Stack Developer - Bioinformatics
+ID-0055,,Prevoir IVF,,,,,,"Thane, Maharashtra",,VPS Hosting and Website Developer,VPS Hosting and Website Developer
+ID-0056,,Progenesis IVF Centre,,,,,,"Thane District, Maharashtra",,Senior PHP Developer ( Min 6 Years ),Senior PHP Developer ( Min 6 Years )
+ID-0057,,Punon Technologies Pvt Ltd,,,,,,"Mumbai, Maharashtra",,Software Developer (Node Js),Software Developer (Node Js)
+ID-0058,HR / Recruitment Team,SA Infotechs,sainfotechs25@gmail.com,+91 8104012686,,https://sainfotechs.com/,General / Careers,"Vashi, Navi Mumbai",https://sainfotechs.com/career.html,"Current Laravel/PHP, Full Stack React/Node, UI/UX and other roles",Laravel; PHP; Full Stack; React; Node.js; UI/UX; Internships
+ID-0059,,Safal Money,,,,,,"Andheri West, Mumbai, Maharashtra",,Marketing Intern,Marketing Intern
+ID-0060,,Screens player,,,,,,"Andheri West, Mumbai, Maharashtra",,Digital Marketing Manager / Content Writer,Digital Marketing Manager / Content Writer
+ID-0061,,Softinator TechLabs,hr@softinator.ai,+91 7869661171,,https://softinator.com,HR,"Andheri East, Mumbai",https://softinator.com/job-openings/,Full Stack WordPress/PHP/JavaScript role plus web/mobile internships,Full Stack WordPress; PHP; JavaScript; Web Development
+ID-0062,,Softoasis Technologies,hr@softoasistech.com,+91 9356704158,,https://softoasistech.com,HR,"Belapur, Navi Mumbai",https://softoasistech.com/careers,"11 current openings including Laravel/PHP, backend, full-stack and React Native",Senior Laravel/PHP; Backend; Full Stack; React Native; AI/GenAI
+ID-0063,,Solarix Technologies Pvt Ltd,,,,,,"Andheri, Mumbai, Maharashtra",,Senior Laravel Developer,Senior Laravel Developer
+ID-0064,,SPIT Tech,hr@spit-tech.com,,,https://spit.lovable.app,HR,Mumbai,https://spit.lovable.app/careers/full-stack-developer/mumbai,Current Full Stack Developer role,Full Stack Developer; React; Node.js
+ID-0065,,Supremacy Edu,,,,,,"Andheri Railway Station, Mumbai, Maharashtra",,Full stack developer,Full stack developer
+ID-0066,,Techizer Tech Solutions,hrsupport@techizerindia.com,+91 8369581147,,https://www.techizerindia.com,HR,"Kandivali East, Mumbai",https://www.techizerindia.com/career.php,Current PHP Developer opening,PHP Developer; CodeIgniter
+ID-0067,,Universal Media,,,,,,"Mulund West, Mumbai, Maharashtra",,Digital Marketing Intern,Digital Marketing Intern
+ID-0068,,VizPay,,,,,,"Majiwada, Thane, Maharashtra",,Software Tester,Software Tester
+ID-0069,,Wama Technology,hr@wamatechnology.com,+91 9137611827,,https://www.wamatechnology.com,HR/Career,"Borivali, Mumbai",https://www.wamatechnology.com/contact-page/,Career contact published; prior hiring signal for PHP/full-stack,PHP Developer; Full Stack Developer; Business Development
+ID-0070,,WEQ Technologies,sales@weqtechnologies.com,+91 93212 78746,,https://weqtechnologies.com,Sales,Mumbai,https://weqtechnologies.com/careers/,"Current careers page lists Java, PHP, Front End and QA roles",PHP Developer; Front End Developer; Java Developer; QA
+ID-0071,,Algoocean,sales@algoocean.com,+91 9022120324,+1 402 402 9366,https://algoocean.com,Sales,"Mumbai, Maharashtra",https://algoocean.com/careers.php,Careers page available,Mobile; Web; Digital
+ID-0072,,AOF Engineering Systems,,,,,,Remote,,Full Stack Developer,Full Stack Developer
+ID-0073,,Appectual,info@appectual.com,+91 7738141539,+91 2267252517,https://appectual.com,General,,,Company contact found,Web / App Development
+ID-0074,HR / Recruitment Team,AryavartaAI,,,,https://aryavartaai.com/,Careers / Company,Mumbai / Remote,https://aryavartaai.com/careers,"24 open positions across frontend, backend, mobile, AI/ML, DevOps and internships",React; Next.js; Node.js; PHP; Laravel; Python; Flutter; React Native; AI/ML; DevOps
+ID-0075,,Bao Bao Pte Ltd.,,,,,,Remote,,Full Stack Developer,Full Stack Developer
+ID-0076,,Chordz,,,,,,Remote,,Mobile Application Developer,Mobile Application Developer
+ID-0077,HR / Recruitment Team,Cnergee Technologies,legal@cnergee.com,,,https://cnergee.com/,Company / Careers,"CBD Belapur, Navi Mumbai",https://cnergee.com/career,Open Full Stack Developer and Web/UI/UX Developer roles,Full Stack; Frontend; Backend; UI/UX; Web Development
+ID-0078,,DXMinds,hr@dxminds.com,,,https://dxminds.com,HR,India,,HR contact supplied,Software Development
+ID-0079,,Europa Technosoft Pvt Ltd,,,,,,"Noida, Uttar Pradesh",,Senior Full Stack Developer,Senior Full Stack Developer
+ID-0080,,Fiddle Leaf Solutions,,,,,,Remote,,Full Stack Developer,Full Stack Developer
+ID-0081,,i-Softinc,sales@i-softinc.com,+91 9971731257,+1 606 824 0211,https://i-softinc.com,Sales,Noida / India,https://i-softinc.com/Contact-us/,Dedicated jobs contact published,Software / App Development
+ID-0082,,Kash Info Solution,,,,,,"Surat, Gujarat",,PHP Laravel Developer,PHP Laravel Developer
+ID-0083,HR / Recruitment Team,MakeB Technologies,,,,https://makebtech.com/,Careers / Company,Mumbai role,https://makebtech.com/careers,Senior PHP Developer listing; React.js Developer also listed,PHP; React.js; Backend; Full Stack
+ID-0084,,Pakka Jobs,,,,,,Remote,,Full Stack Developer,Full Stack Developer
+ID-0085,,Random Techie,,,,,,Remote,,React Full Stack Developer ( | Remote | 2-5 Years Experience ),React Full Stack Developer ( | Remote | 2-5 Years Experience )
+ID-0086,,Saveasweb,info@saveasweb.com,+91 9769061842,+91 9769098183,https://saveasweb.com,General,,,Company contact found,Web Development
+ID-0087,HR / Recruitment Team,SPCL Infotech,,,,https://www.spclinfotech.com/,Careers / Company,Mumbai region,https://www.spclinfotech.com/careers,"Current Java, Laravel, ReactJS/Android/Flutter and DevOps internships",Laravel; PHP; React; Android; Flutter; Java; DevOps; Internships
+ID-0088,,Stymeta Technologies,info@stymeta.com,+91 8850053030,,https://www.stymeta.com,General,"Kandivali West, Mumbai",,Company contact found,Software / Web Development
+ID-0089,,The Yellow Strawberry,hello@theyellowstrawberry.com,+91 7905809105,+91 7021844116,https://theyellowstrawberry.com,General,,,Company contact found,Web / Digital
+ID-0090,,5bix IT Solutions,,,,,,"Chandigarh, Chandigarh",,Full Stack Developer,Full Stack Developer
+ID-0091,,Ace Blend,,,,,,"Lower Parel, Mumbai, Maharashtra",,Web Developer,Web Developer
+ID-0092,,Ada Lovelace Technologies LLP,,,,,,"Navi Mumbai, Maharashtra",,Tech Lead (Full Stack),Tech Lead (Full Stack)
+ID-0093,,Advance Mobility Private Limited,,,,,,"Mumbai, Maharashtra",,Full Stack Developer,Full Stack Developer
+ID-0094,,Adweb Technology Pvt Ltd,,,,,,"Andheri West, Mumbai, Maharashtra",,Quality Assurance Engineer,Quality Assurance Engineer
+ID-0095,,AM:PM Network,,,,,,"Mumbai, Maharashtra",,"Senior Full-Stack Software Engineer(SDE II), Flutter & Django","Senior Full-Stack Software Engineer(SDE II), Flutter & Django"
+ID-0096,,AppSquadz,hr@appsquadz.com,+91 8447702224,,https://www.appsquadz.com,HR,Noida / India,https://www.appsquadz.com/careers,Careers page currently reports 0 openings; HR contact available,Software / Mobile Development
+ID-0097,,AryaXAI,,,,,,"Unknown, Maharashtra",,Software Engineer Developer,Software Engineer Developer
+ID-0098,,Axiant Labs,,,,,,"Andheri, Mumbai, Maharashtra",,Unity Game Developer,Unity Game Developer
+ID-0099,,Babaji Shivram 4P,,,,,,"Andheri East, Mumbai, Maharashtra",,Flutter Developer,Flutter Developer
+ID-0100,,Bitkraft Technologies LLP,,,,,,"Mumbai, Maharashtra",,Full Stack Developer,Full Stack Developer
+ID-0101,,BRIGHTER GLOBAL ADMISSION LLP,,,,,,"Goregaon, Mumbai, Maharashtra",,Full Stack Developer (MVC Frameworks + AI Tools),Full Stack Developer (MVC Frameworks + AI Tools)
+ID-0102,,Codeverse Weenggs Solution LLP,,,,,,"Surat, Gujarat",,Android Developer,Android Developer
+ID-0103,,DataAnnotation,,,,,,"Mumbai, Maharashtra",,Full Stack Engineer - AI Trainer | Software Engineer - AI Trainer | Application Developer - AI Trainer,Full Stack Engineer - AI Trainer | Software Engineer - AI Trainer | Application Developer - AI Trainer
+ID-0104,,Datagrid Solutions Pvt Ltd,,,,,,"Andheri East, Mumbai, Maharashtra",,Python Developer,Python Developer
+ID-0105,,Dev Marketing Pvt ltd,,,,,,"Andheri, Mumbai, Maharashtra",,Web Designer/Developer,Web Designer/Developer
+ID-0106,,Docterz HealthTech Labs Private Limited,,,,,,"Andheri East, Mumbai, Maharashtra",,Build Release Engineer,Build Release Engineer
+ID-0107,,FinGuru Services India Private Limited,,,,,,"Mumbai, Maharashtra",,Full Stack Engineer - Fintech / LendingOps,Full Stack Engineer - Fintech / LendingOps
+ID-0108,,Fuku,,,,,,"Delhi, Delhi",,Full Stack Developer Team Lead-WFH/Remote,Full Stack Developer Team Lead-WFH/Remote
+ID-0109,,Goldenmace IT Solutions,hr@goldenmace.com,7715000787,,http://goldenmace.com,HR,Mumbai / Navsari,,Public PHP developer hiring signal; older post,PHP Developer; Laravel; WordPress; Web Developer
+ID-0110,,HelixBeat,,,,,,Remote,,Full Stack Developer,Full Stack Developer
+ID-0111,,IFI Techsolutions,,,,,,"Thane, Maharashtra",,Full Stack Developer,Full Stack Developer
+ID-0112,,Inventiway Solutions Pvt. Ltd.,,,,,,"Mumbai, Maharashtra",,Mid Level Full Stack Developer,Mid Level Full Stack Developer
+ID-0113,,JobOppor HR Consultant Services,,,,,,"Andheri, Mumbai, Maharashtra",,.NET Core Developer (5 to 7 Years),.NET Core Developer (5 to 7 Years)
+ID-0114,,Kombee Technologies (I) Pvt. Ltd.,,,,,,"Thane, Maharashtra",,Full Stack Developer,Full Stack Developer
+ID-0115,,LEMON YELLOW LLP,,,,,,"Thane District, Maharashtra",,Frontend Developer (LY-FE02) | Full-stack Developer (LY-FS04),Frontend Developer (LY-FE02) | Full-stack Developer (LY-FS04)
+ID-0116,,Mentorchamp Edtech Pvt Ltd,,,,,,"Ghansoli, Navi Mumbai, Maharashtra",,Full Stack Developer,Full Stack Developer
+ID-0117,,Network Techlabs,,,,,,"Andheri, Mumbai, Maharashtra",,EXECUTIVE - SOFTWARE ENGINEER,EXECUTIVE - SOFTWARE ENGINEER
+ID-0118,,Nimap Infotech,,,,,,"Mumbai, Maharashtra",,Android Developer,Android Developer
+ID-0119,,NxEev Technologies,,,,,,"Malad, Mumbai, Maharashtra",,Java Developer,Java Developer
+ID-0120,,ONEWAY,,,,,,"Byculla, Mumbai, Maharashtra",,Flutter Developer,Flutter Developer
+ID-0121,,Pharmizza Technology Solutions Pvt Ltd,,,,,,"Marol, Mumbai, Maharashtra",,Web Developer (Mumbai),Web Developer (Mumbai)
+ID-0122,,Rainbow International School,,,,,,"Brahmand, Thane, Maharashtra",,Product Manager – Mobile Apps & Growth,Product Manager – Mobile Apps & Growth
+ID-0123,,Refer My College,,,,,,Remote,,Software Developer,Software Developer
+ID-0124,,Sov Technologies Pvt Ltd,,,,,,"Andheri H.O, Mumbai, Maharashtra",,MERN Stack Developer (React.js & Node.js),MERN Stack Developer (React.js & Node.js)
+ID-0125,,Spotlytt,,,,,,"Mumbai, Maharashtra",,Software Engineer,Software Engineer
+ID-0126,,Sri Arts,,,,,,"Goregaon, Mumbai, Maharashtra",,Full Stack Website Developer,Full Stack Website Developer
+ID-0127,,SS EDUTECH,,,,,,"Thane, Maharashtra",,Website Developer,Website Developer
+ID-0128,,Switch My Loan Pvt Ltd,,,,,,"Borivali H.O, Mumbai, Maharashtra",,Tech Lead,Tech Lead
+ID-0129,,Tectah,,,,,,Remote,,Full Stack Developer,Full Stack Developer
+ID-0130,,The Global Talent Resources,,,,,,Remote,,Full Stack Developer,Full Stack Developer
+ID-0131,,Transparent Capital,,,,,,"Marol, Mumbai, Maharashtra",,Mobile App Developer | App Developer,Mobile App Developer | App Developer
+ID-0132,,Unni AI Labs,,,,,,"Mumbai, Maharashtra",,Full Stack Developer (Node.js & React.js),Full Stack Developer (Node.js & React.js)
+ID-0133,,Waya Financial Technologies,,,,,,"Goregaon, Mumbai, Maharashtra",,PHP Laravel Developer,PHP Laravel Developer
+ID-0134,,Xeroadss Pvt Ltd,,,,,,"Mumbai, Maharashtra",,Full Stack Developer,Full Stack Developer
+ID-0135,,Traction Shastra,connect@tractionshastra.com,9372779012,,https://tractionshastra.com,,Remote,,Full Stack Developer,Full Stack Developer
