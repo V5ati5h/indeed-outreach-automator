@@ -6,7 +6,7 @@ import smtplib
 from email.message import EmailMessage
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import urlparse, parse_qs, quote
 from app import config
 from app.database import get_db, init_db
 from app.outreach.templates import (
@@ -117,6 +117,15 @@ label{font-size:12px;color:#555;display:block;margin-top:6px}label input,label t
 pre{white-space:pre-wrap;font-size:12px;color:#a00;margin:6px 0 0}
 h3{margin:0 0 2px;font-size:15px}.topline{display:flex;justify-content:space-between;align-items:center;gap:8px}
 .search{width:100%;margin-bottom:8px}.filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:13px}
+dialog{border:1px solid #ccc;border-radius:10px;padding:0;max-width:640px;width:92vw}
+dialog::backdrop{background:rgba(0,0,0,.45)}
+.dlg-body{padding:14px}.dlg-body h3{margin-bottom:8px}
+.pager{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:10px 0;font-size:13px}
+.pager a{border:1px solid #ccc;border-radius:6px;padding:3px 10px;text-decoration:none;color:#1a1a1a;background:#fff}
+.pager span.cur{background:#111;color:#fff;border-color:#111;border:1px solid #111;border-radius:6px;padding:3px 10px}
+.pager span.gap{color:#888}
+.snip{font-size:13px;color:#333;white-space:pre-wrap;max-height:66px;overflow:hidden;margin:4px 0}
+form.inline{display:inline}
 """
 
 
@@ -124,14 +133,31 @@ def _esc(s) -> str:
     return html.escape(s or "")
 
 
-def _queue_cards(msgs) -> str:
+def _pager(total: int, page: int, per: int, base: str) -> str:
+    pages = max(1, (total + per - 1) // per)
+    page = min(max(1, page), pages)
+    keep = [p for p in range(1, pages + 1) if p in (1, pages) or abs(p - page) <= 2]
+    links, last = [], 0
+    for p in keep:
+        if p - last > 1:
+            links.append("<span class='gap'>…</span>")
+        links.append(f"<span class='cur'>{p}</span>" if p == page
+                     else f"<a href='{base}&page={p}&per={per}'>{p}</a>")
+        last = p
+    if page > 1:
+        links.insert(0, f"<a href='{base}&page={page - 1}&per={per}'>Prev</a>")
+    if page < pages:
+        links.append(f"<a href='{base}&page={page + 1}&per={per}'>Next</a>")
+    return f"<div class='pager'>{' '.join(links)}<span style='color:#666'>{total} total</span></div>"
+
+
+def _queue_cards(msgs, back: str) -> str:
     out = []
     for m in msgs:
         to = m["email"] or m["phone"] or "(no contact)"
         subj = (f"<input type='text' style='width:100%' name='subject' value='{_esc(m['subject'])}'>"
                 if m["channel"] == "EMAIL" else "")
-        btns = ["<button name='op' value='save'>Save edit</button>",
-                "<button name='op' value='regen' title='Rebuild from profile'>Regen</button>"]
+        btns = []
         if m["status"] == "QUEUED":
             btns.append("<button name='op' value='approve'>Approve</button>")
         if m["channel"] == "EMAIL" and m["status"] == "APPROVED":
@@ -148,9 +174,18 @@ def _queue_cards(msgs) -> str:
             f"<span class='pill {m['status']}'>{m['status']}</span></div>"
             f"<div class='meta'><span>{m['channel']}</span><span>{_esc(to)}</span>"
             f"<span>{_esc((m['error'] or '')[:120])}</span></div>"
-            f"<form method='post'><input type='hidden' name='id' value='{m['id']}'>{subj}"
+            f"<div class='snip'>{_esc((m['body'] or '')[:220])}</div>"
+            f"<div class='row'><button data-open='dlg-{m['id']}'>View / Edit</button>"
+            f"<form class='inline' method='post'><input type='hidden' name='id' value='{m['id']}'>"
+            f"<input type='hidden' name='back' value='{back}'>{' '.join(btns)}</form></div></div>"
+            f"<dialog id='dlg-{m['id']}'><div class='dlg-body'><h3>#{m['id']} {_esc(m['co'])} — {_esc(m['job'])}</h3>"
+            f"<div class='meta'><span>{m['channel']}</span><span>{_esc(to)}</span></div>"
+            f"<form method='post'><input type='hidden' name='id' value='{m['id']}'>"
+            f"<input type='hidden' name='back' value='{back}'>{subj}"
             f"<textarea name='body'>{_esc(m['body'])}</textarea>"
-            f"<div class='row'>{' '.join(btns)}</div></form></div>")
+            f"<div class='row'><button class='primary' name='op' value='save'>Save edit</button>"
+            f"<button name='op' value='regen' title='Rebuild from profile'>Regen</button>"
+            f"<button type='button' data-close>Close</button></div></form></div></dialog>")
     return "".join(out) or "<div class='card'>Nothing matches. Run a sync or clear search.</div>"
 
 
@@ -169,7 +204,17 @@ def _page(qs: dict) -> bytes:
     filt = (qs.get("f", ["QUEUED"])[0] if isinstance(qs.get("f"), list) else qs.get("f", "QUEUED")).upper()
     ch = (qs.get("ch", ["ALL"])[0] if isinstance(qs.get("ch"), list) else qs.get("ch", "ALL")).upper()
     sort = (qs.get("sort", ["new"])[0] if isinstance(qs.get("sort"), list) else qs.get("sort", "new")).lower()
-    q = (qs.get("q", [""])[0] if isinstance(qs.get("q"), list) else qs.get("q", "")).strip().lower()
+    q = (qs.get("q", [""])[0] if isinstance(qs.get("q"), list) else qs.get("q", "")).strip()
+    ql = q.lower()
+    try:
+        page = max(1, int((qs.get("page", ["1"])[0] if isinstance(qs.get("page"), list) else qs.get("page", "1"))))
+    except ValueError:
+        page = 1
+    try:
+        per = int((qs.get("per", ["10"])[0] if isinstance(qs.get("per"), list) else qs.get("per", "10")))
+        per = per if per in (10, 25, 50) else 10
+    except ValueError:
+        per = 10
     with get_db() as conn:
         counts = {r["status"]: r["c"] for r in
                   conn.execute("SELECT status, COUNT(*) c FROM outreach_messages GROUP BY status").fetchall()}
@@ -185,21 +230,29 @@ def _page(qs: dict) -> bytes:
     if ch != "ALL":
         rows = [r for r in rows if r["channel"] == ch]
     if q:
-        rows = [r for r in rows if q in " ".join(
+        rows = [r for r in rows if ql in " ".join(
             str(r[k] or "") for k in ("co", "job", "email", "phone", "subject", "body")).lower()]
     if sort == "old":
         rows.sort(key=lambda r: r["id"])
     elif sort == "co":
         rows.sort(key=lambda r: (r["co"] or "").lower())
+    total = len(rows)
+    pages = max(1, (total + per - 1) // per)
+    page = min(page, pages)
+    rows = rows[(page - 1) * per:page * per]
     for m in rows:
         m["link"] = wa_link(m["phone"] or "", m["body"] or "") if m["channel"] == "WHATSAPP" else ""
+    base = f"/?f={filt}&ch={ch}&sort={sort}&q={quote(q)}"
+    back = f"{base}&page={page}&per={per}"
+    cards = _queue_cards(rows, _esc(back))
+    pager = _pager(total, page, per, base)
     dry = _live("DRY_RUN", "1") == "1"
     smtp_ok = bool(_live("SMTP_HOST") and _live("SMTP_USERNAME"))
     p = load_profile()
     flash = f"<div class='{'err' if FLASH['err'] else 'ok'}'>{_esc(FLASH['msg'])}</div>" if FLASH["msg"] else ""
     send_note = ("" if (not dry and smtp_ok) else
                  "<div class='note'>Email Send is OFF (DRY_RUN=1 or no SMTP). Edit + approve works; set .env to enable Send.</div>")
-    tabs = " ".join(f"<a href='/?f={f}&ch={ch}&sort={sort}&q={_esc(q)}'>{f} ({counts.get(f, 0)})</a>"
+    tabs = " ".join(f"<a href='/?f={f}&ch={ch}&sort={sort}&q={quote(q)}'>{f} ({counts.get(f, 0)})</a>"
                     for f in ("QUEUED", "APPROVED", "SENT", "ALL"))
     return (f"<html><head><meta name=viewport content='width=device-width,initial-scale=1'>"
             f"<title>Outreach</title><style>{CSS}</style></head><body>"
@@ -220,10 +273,14 @@ def _page(qs: dict) -> bytes:
             + "".join(f"<option value='{c}'{' selected' if ch == c else ''}>{c}</option>" for c in ("ALL", "EMAIL", "WHATSAPP"))
             + f"</select><select name='sort'>"
             + "".join(f"<option value='{s}'{' selected' if sort == s else ''}>{l}</option>" for s, l in (("new", "Newest"), ("old", "Oldest"), ("co", "Company A–Z")))
-            + f"</select><button>Apply</button><span style='color:#666'>{len(rows)} shown</span></div></form></div>"
-            f"{send_note}{_queue_cards(rows)}"
+            + f"</select><select name='per'>"
+            + "".join(f"<option value='{n}'{' selected' if per == n else ''}>{n}/page</option>" for n in (10, 25, 50))
+            + f"</select><button>Apply</button><span style='color:#666'>{total} match</span></div></form></div>"
+            f"{send_note}{pager}{cards}{pager}"
             f"<div class='sec' id='profile'><h2>My details (used in messages)</h2>{_profile_form(p)}"
             f"<div style='font-size:12px;color:#666;margin-top:6px'>Resume: {_esc(str(config.RESUME_PATH))} — attached to emails.</div></div>"
+            f"<script>document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>document.getElementById(b.dataset.open).showModal());"
+            f"document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>b.closest('dialog').close());</script>"
             f"</div></body></html>").encode()
 
 
@@ -285,8 +342,11 @@ class H(BaseHTTPRequestHandler):
         except Exception as e:  # noqa: BLE001 — surfaced in UI
             msg, err = str(e)[:300], True
         FLASH["msg"], FLASH["err"] = msg, err
+        back = g("back", "/")
+        if not back.startswith("/"):
+            back = "/"
         self.send_response(303)
-        self.send_header("Location", "/?f=QUEUED" if op in ("approve", "skip") else "/")
+        self.send_header("Location", back)
         self.end_headers()
 
     def _send(self, body: bytes):
